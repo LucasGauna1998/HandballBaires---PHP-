@@ -1,0 +1,24 @@
+@use '../base/variables' as v;
+
+
+.contenido-sponsors {
+    h3 {
+        text-align: center;
+        font-size: 4rem;
+        color: v.$bordoClaro;
+        font-style: v.$poppins;
+        font-weight: 700;
+    }
+}
+
+.lista-sponsors {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    li {
+        flex: 1;
+        padding: 0 .5rem;
+    }
+}

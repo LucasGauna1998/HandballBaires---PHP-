@@ -1,0 +1,63 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.principal-contenido {
+    @include m.tablet {
+        display: grid;
+         grid-template-columns: 3fr 1fr;
+         gap: 2rem;
+    }
+}
+
+.noticias {
+    h3 {
+        border-radius: 1rem;
+        width: 15rem;
+        text-align: center;
+        font-family: v.$poppins;
+        text-transform: uppercase;
+        background-color: v.$rojo;
+        color: v.$blanco;
+    }
+}
+
+.grid-noticias {
+    @include m.tablet {
+
+        @include m.grid(3, 1.5rem);
+    }
+}
+
+.noticia {
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+.noticia-img {
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.2);
+        filter:  invert(0);
+    }  
+}
+
+.titulo-noticia {
+    position: absolute;
+    margin: 0;
+    padding: 1rem .5rem;
+    width: 100%;
+    bottom: 0;
+   font-size: 2.6rem;
+   color: v.$blanco;
+//    background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0, 1));
+    background: linear-gradient(hsla(0,0%,100%,0),#820013);
+    
+}
+
+

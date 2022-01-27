@@ -1,0 +1,107 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m; 
+
+.contacto {
+    background-color: v.$bordoClaro;
+}
+
+.grid-contacto {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.contacto--informacion {
+    min-height: 40rem;
+    background-image: url(/src/img/fondo-contacto.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.informacion {
+    color: v.$blanco;
+    h3 {
+        text-align: center;
+      
+    }
+     p {
+        font-size: 2.3rem;
+        text-align: center;
+        font-weight: 700;
+     }
+    
+}
+
+.contacto--ubicacion {
+    padding-bottom: 2rem;
+    h3 {
+        text-align: center;
+        color: v.$blanco;
+    }
+    p {
+        font-size: 1.8rem;
+        text-align: center;
+        color: v.$blanco;
+    }
+    
+
+
+
+    
+}
+
+.contenedor-mapa {
+    .map {
+        margin: 0 auto;
+        width: 25rem;
+        z-index: 2;
+        height: 25rem;
+        // background-color: v.$blanco;
+
+    }
+}
+
+.contacto--video {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+    @include m.tablet {
+        height: 58rem;
+    }
+}
+
+.contacto--redes-sociales {
+    h3 {
+        color: v.$blanco;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        font-family: v.$poppins;
+    }
+    padding: 0 2rem;
+}
+.redes-sociales {
+    @include m.grid(2, 2rem);
+    list-style: none;
+    padding: 1.5rem 2rem;
+
+   
+}
+li.tiktok {
+    position: relative;
+    z-index: 2;
+}
+
+li.tiktok::after{
+    background: v.$blanco;
+    content: '';
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+    left: 2%;
+}

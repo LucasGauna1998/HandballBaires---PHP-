@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body {
+    position: relative;
+}
+
+.modal-beneficio {
+    
+    background-color:rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.modal-body {
+    background-color: v.$blanco;
+    max-width: 50rem;
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    h4 {
+        margin: 0 0 2rem 0;
+        color: v.$gris;
+        font-weight: 400;
+        border-bottom: 1px solid v.$gris;
+        padding: 0;
+    }
+    
+}
+
+.formulario-beneficio {
+    input {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+        background-color: v.$rojo;
+        font-size: 2rem;
+    }
+}
+
+.modal-open {
+    position: fixed;
+}
+
+.modal-close {
+    display: none;
+}

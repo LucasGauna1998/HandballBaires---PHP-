@@ -1,0 +1,68 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.noticia-historia {
+    margin-top: 4rem;
+    .imagen-historia {
+        position: relative;
+        width: 22rem;
+        height: 22rem;
+        margin: 0 auto;
+    }
+  
+    .año-historia {
+        background-color: v.$rojo;
+        color: v.$blanco;
+        font-weight: 700;
+        font-size: 2.6rem;
+        display: inline-block;
+        padding: .5rem 2rem;
+        border-radius: 1rem 0 1rem 0;
+        position: absolute;
+        top: -4rem;
+        left: -2rem;
+        z-index: 1;
+    }
+    .img-historia {
+        position: relative;
+        margin: 0 auto;
+        height: 22rem;
+        width: 22rem;
+        border-radius: 50%;
+    }
+}
+
+.contenido-historia {
+    p {
+        font-family: v.$poppins;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.6;
+        color: v.$gris;
+    }
+}
+
+.noticia-historia {
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .img-historia {
+        @include m.tablet {
+            flex: 1;
+        }
+    }
+    .contenido-historia {
+        @include m.tablet {
+            flex: 3;
+        }
+
+        p {
+            font-size: 2.2rem;
+        }
+    }
+}

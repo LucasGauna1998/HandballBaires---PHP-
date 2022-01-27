@@ -1,0 +1,63 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.site-footer {
+    background-color: v.$bordo;
+    margin: 3rem 0 0 0;
+    padding: 5rem 0;
+}
+
+
+.informacion-footer {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    
+    
+    li {
+        font-size: 1.6rem;
+        color: v.$blanco;
+        font-family: v.$poppins;
+        margin-bottom: 2rem;
+    }
+
+    @include m.tablet {
+        
+        @include m.grid(4, 2rem);
+        align-items: center;
+    }
+}
+
+.redes-sociales-footer {
+    
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        display: block;
+        margin: 0 1rem;
+    }
+}
+.logo-footer {
+    width: auto;
+    display: inline-block;
+}
+li.logo {
+    margin: 0 auto;
+}
+
+
+
+li.numero {
+    justify-content: center;
+    display: flex;
+
+    img {
+        margin-top: 1.1rem;
+        filter: invert(1);
+        height: 4rem;
+        
+    }
+    
+}

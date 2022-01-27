@@ -1,0 +1,84 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.contenido-beneficios {
+    margin-top: 4rem;
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+   
+}
+
+.beneficio-card {
+    box-shadow: 5px 5px 15px 5px rgb(201 182 182 / 42%);
+    // margin-top: 2rem;
+    margin: 2rem auto;
+    position: relative;
+    width: 90%;
+    height: 30rem;
+    overflow: hidden;
+   border-radius: 3rem 0 3rem 0;
+
+   &:hover {
+       cursor: pointer;
+
+       .info-beneficio {
+           bottom: 0;
+       }
+   }
+   img {
+       width: 100%;
+       height: 100%;
+   }
+
+  
+
+  
+}
+
+.btn-beneficio {
+    display: inline-block;
+    background-color: v.$rojoClaro;
+    position: relative;
+    bottom: 10rem;
+    z-index: 2;
+    font-weight: 700;
+    right:  -15%;
+    font-family: v.$poppins;
+    padding: 1rem 3rem;
+    color: v.$blanco;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    
+}
+.info-beneficio {
+    transition: all .3s;
+    position: absolute;
+     bottom: -45rem;
+    background-color: rgba($color: v.$blanco, $alpha: .6);
+    width: 100%;
+    height: 100%;
+
+    .nombre-beneficio, .descuento-beneficio{
+        color: v.$rojo;
+        font-size: 3.6rem;
+        font-family: v.$poppins;
+        font-weight: 700;
+    }
+    .nombre-beneficio {
+        padding-left: 2rem;
+    }
+    .descuento-beneficio {
+        position: absolute;
+        left: 70%;
+        margin: 0;
+    }
+}
+
+.btn-beneficio {
+    @include m.tablet {
+        right:  -40%;
+    }
+}

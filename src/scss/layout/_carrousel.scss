@@ -1,0 +1,96 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.slider {
+    position: relative;
+
+    overflow: hidden;
+    
+}
+
+
+
+.contenido-slider {
+    display: flex;
+    
+    width: 300%;
+    margin-left: -100%;
+
+    @include m.tablet {
+        height: 50rem;
+    }
+}
+
+.slider-img {
+    width: 100%;
+    position: relative;
+    transition: all .5s;
+    img {
+        width: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: v.$negro;
+
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    transition: all .3s ease-in-out;
+    line-height: 1.5;
+    background-color: rgba($color: v.$blanco, $alpha: .5);
+}
+
+.slider-btn:hover {
+    background-color: rgba($color: v.$blanco, $alpha: .7);
+}
+
+.right {
+    
+    right: 2rem;
+}
+
+
+.left {
+    left: 2rem;
+}
+
+
+.slider-texto {
+    background-color: rgba($color: v.$blanco, $alpha: .7);
+    position: absolute;
+    top: 20%;
+
+    font-size: 2rem;
+    padding: 1rem;
+    color: v.$rojoClaro;
+    font-family: v.$poppins;
+    font-weight: 700;
+    text-transform: uppercase;
+    left: 6rem;
+    
+    
+    transform: translateY(-50%);
+
+
+    @include m.tablet {
+        padding: 2rem;
+        max-width: 50rem;
+        text-align: center;
+        line-height: 1.2;
+        top: 40%;
+        font-size: 5rem;
+        left: 10rem;
+    }
+}

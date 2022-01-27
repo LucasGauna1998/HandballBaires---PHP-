@@ -1,0 +1,23 @@
+@use '../base/mixins' as m;
+.menu{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear; 
+    // transition: all .2s ease-in-out;
+
+    @include m.tablet {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
+}
+
+
+
+.mostrar  {
+    visibility: visible;
+    opacity: 1;
+    height: unset;
+    
+}

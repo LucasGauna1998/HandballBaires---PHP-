@@ -1,0 +1,51 @@
+@use '../base/variables' as v;
+
+.contenido-login {
+    background-color: v.$view;
+    height: 100vh;
+    
+}
+
+.formulario-login {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   
+   
+  
+
+    form {
+
+        img {
+            margin: 0 auto;
+        }
+        h4 {
+            margin: 0;
+            color: #ffffff;
+        }
+        border: 1px solid #ffffff;
+        border-radius: 1.5rem;
+        width: 40rem;
+        padding: 2rem;
+        
+        margin: 0 auto;
+
+        label, input {
+            display: block;
+        }
+        
+        label {
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        input {
+            padding: 1rem;
+            width: 100%;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+

@@ -1,0 +1,148 @@
+ @use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body {
+    &.scroll-body {
+        padding-top: 8.5rem;
+    }
+}
+
+
+.site-header {
+     @include m.tablet {
+        &.fijo {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 3;
+            box-shadow: 2rem 1rem 1rem -1rem #333;
+        }
+     }
+}
+
+
+ .contenido-header {
+     padding: 1rem 0;
+    
+     @include m.tablet {
+         display: flex;
+         justify-content: space-between;
+     }
+     
+ }
+.logotipo {
+    margin: 0 auto 1rem;
+    @include m.tablet {
+        margin: unset;
+    }
+   
+}
+
+ // Menu Hamburguer
+
+ .menu-hamburguer {
+     @include m.tablet {
+         display: none;
+     }
+     width: 4rem;
+     border: 2px solid v.$negro;
+     padding: .4rem;
+     border-radius: .5rem;
+     margin: 0 auto 1rem;
+    filter: invert(100%);
+    
+    &:hover {
+        cursor: pointer;
+    }
+    
+ }
+ 
+
+ .navegacion-principal {
+     text-align: center;
+     a {
+          
+         font-family: v.$poppins;
+         font-weight: v.$bold;
+         font-size: 1.6rem;
+         cursor: pointer;
+         transition: color .3s ease-in-out;
+         &:hover {
+            //  border-bottom: 1px solid v.$blanco;
+            color: v.$rojo;
+         }
+     }
+     @include m.tablet {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+     }
+ }
+
+ .navegacion-principal {
+     button {
+         display: inline-block;
+         background-color: transparent;
+         color: v.$blanco;
+         border: none;
+         font-family: v.$poppins;
+         font-weight: v.$bold;
+         font-size: 1.6rem;
+         cursor: pointer;
+         transition: color .3s ease-in-out;
+         &:hover {
+            //  border-bottom: 1px solid v.$blanco;
+            color: v.$rojo;
+         }
+     }
+     
+ }
+.contenedor-sub-menu {
+    position: relative;
+    z-index: 3;
+}
+ .sub-menu {
+     z-index: 3;
+    display: none;
+    margin: 0 auto;
+    width: 20rem;
+    padding: 0;
+    list-style: none;
+    // display: flex;
+    flex-direction: column;
+    
+    li {
+        background-color: rgba(130, 0, 19, .75);
+        color: v.$blanco;
+        display: inline-block;
+        
+
+        a {
+            text-transform: uppercase;
+
+
+            &:hover {
+                background-color: v.$blanco;
+            }
+        }
+    }
+}
+
+.sub-menu {
+    @include m.tablet {
+        position: absolute;
+        left: -4rem;
+        margin: 0 auto;
+        width: 18rem;
+        margin-top: .5rem;
+
+        li {
+            padding: 0;
+            
+        }
+    }
+}
+ .visible {
+     display: flex;
+     
+ }

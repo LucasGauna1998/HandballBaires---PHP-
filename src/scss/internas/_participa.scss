@@ -1,0 +1,56 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.formulario {
+    max-width: 80rem;
+    margin: 0 auto;
+    h4 {
+        font-size: 2.2ren;
+        text-transform: uppercase;
+        color: v.$gris;
+        font-family: v.$poppins;
+        font-weight: 700;
+    }
+    p {
+        font-size: 2rem;
+        font-family: v.$poppins;
+        color: v.$gris;
+    }
+
+    form {
+        width: 100%;
+
+        input, label {
+            width: 100%;
+            display: block;
+             margin-bottom: .5rem;
+        }
+
+        label {
+            color: v.$gris;
+            font-size: 1.6rem;
+            font-family: v.$poppins;
+        }
+
+        input {
+            padding: 1rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        .btn-enviar {
+            background-color: v.$rojo;
+            border: none;
+            font-weight: 700;
+            padding: 2rem 0;
+            color: v.$blanco;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color: v.$rojo, $amount: 8);
+            }
+        }
+    }
+}
